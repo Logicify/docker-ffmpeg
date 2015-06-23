@@ -5,7 +5,7 @@ set -euo pipefail
 #export MAKEFLAGS="-j$[$(nproc) + 1]"
 
 
-yum install -y autoconf automake gcc gcc-c++ git libtool make nasm zlib-devel openssl-devel tar xz mercurial cmake perl which
+yum install -y autoconf automake gcc gcc-c++ git libtool make nasm zlib-devel openssl-devel xz mercurial cmake perl which
 
 
 # yasm
@@ -143,17 +143,7 @@ DIR=$(mktemp -d) && cd ${DIR} && \
               hash -r && \
               rm -rf ${DIR}
 
-# mplayer
-#DIR=$(mktemp -d) && cd ${DIR} && \
-#              curl -Os http://mplayerhq.hu/MPlayer/releases/MPlayer-${MPLAYER_VERSION}.tar.xz && \
-#              tar xvf MPlayer-${MPLAYER_VERSION}.tar.xz && \
-#              cd MPlayer-${MPLAYER_VERSION} && \
-#              ./configure --prefix="${SRC}" --extra-cflags="-I${SRC}/include" --extra-ldflags="-L${SRC}/lib" --bindir="${SRC}/bin" && \
-#              make && \
-#              make install && \
-#              rm -rf ${DIR}
-
-yum remove -y autoconf automake gcc gcc-c++ git libtool nasm  zlib-devel tar xz perl libgomp libstdc++-devel openssl-devel mercurial cmake perl which
+yum remove -y autoconf automake gcc gcc-c++ git libtool nasm  zlib-devel xz perl libgomp libstdc++-devel openssl-devel mercurial cmake perl
 yum clean all
 rm -rf /var/lib/yum/yumdb/*
 echo "/usr/local/lib" > /etc/ld.so.conf.d/libc.conf

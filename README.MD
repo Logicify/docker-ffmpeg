@@ -24,5 +24,5 @@ Also refer to the documentation for [Logicify/centos7](https://github.com/Logici
 
 To check which version of ffmpeg and related libraries is installed you may use: 
 ```
-docker run --rm -it "corvis/ffmpeg" ffmpeg -buildconf
+docker run --rm -it "logicify/ffmpeg" ffmpeg -buildconf
 ```
