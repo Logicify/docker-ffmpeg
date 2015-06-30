@@ -1,7 +1,7 @@
-FROM corvis/java8
+FROM logicify/java8
 MAINTAINER Dmitry Berezovsky <dmitry.berezovsky@logicify.com>
 
-ENV           FFMPEG_VERSION  2.6.3
+ENV           FFMPEG_VERSION  2.7.1
 ENV           YASM_VERSION    1.3.0
 ENV           OGG_VERSION     1.3.2
 ENV           VORBIS_VERSION  1.3.4
