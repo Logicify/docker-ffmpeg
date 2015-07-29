@@ -3,7 +3,7 @@ Docker ffmpeg
 
 This repository contains dockerfile for compiling needed version of ```ffmpeg```. Base image is *Centos 7*
 
-Also includes pre-installed Java 7
+Also includes pre-installed Java 8
 
 Before compilation it installes all reaquired build tooles like *make*, *g++* and then removes it after compilation.
 
